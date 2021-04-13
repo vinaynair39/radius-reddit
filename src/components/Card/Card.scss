@@ -1,0 +1,93 @@
+@import "../../styles/style";
+.card {
+  border-radius: 8px;
+  border: 2px solid $dark;
+  padding: 1rem 2rem;
+  width: 40vw;
+  color: lighten($dark, 40%);
+  margin-bottom: 2rem;
+
+  @include media("<desktop") {
+    width: 80vw;
+  }
+
+  @include media("<tablet") {
+    width: 100%;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .profile {
+      width: 1.5rem;
+      border-radius: 100%;
+      margin-right: 0.5rem;
+    }
+    & span {
+      margin-right: 1rem;
+      font-size: 0.8rem;
+    }
+  }
+  .card-main {
+    display: grid;
+    & h1 {
+      font-size: 1.5rem;
+      color: lighten($dark, 40%);
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .card-image {
+      justify-self: center;
+
+      width: 100%;
+      padding: 1rem 0;
+      cursor: pointer;
+    }
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
+    div,
+    button {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      @include media("<desktop") {
+        padding-bottom: 1rem;
+      }
+    }
+
+    span {
+      display: inline-block;
+      padding: 0 0.5rem;
+      color: lighten($dark, 40%);
+    }
+
+    svg {
+      width: 3vh;
+      height: 3vh;
+      path {
+        fill: lighten($dark, 60%);
+      }
+      &:hover {
+        path {
+          fill: $blue;
+        }
+      }
+    }
+  }
+
+  .saved {
+    svg {
+      path {
+        fill: $blue;
+      }
+    }
+  }
+}

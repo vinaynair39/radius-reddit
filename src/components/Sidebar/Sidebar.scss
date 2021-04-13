@@ -1,0 +1,78 @@
+@import "../../styles/style";
+.sidebar {
+  height: 100%;
+  width: 15rem;
+  padding: 1vh 0;
+  .navs {
+    margin-bottom: 1rem;
+    .nav {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      border-radius: 8px;
+      transition: all 0.1s ease-in-out;
+      cursor: pointer;
+      span {
+        margin-left: 0.5rem;
+      }
+      svg {
+        width: 2rem;
+        height: 2rem;
+        path {
+          fill: $blue;
+        }
+      }
+
+      &:hover {
+        span {
+          color: $blue;
+        }
+        background-color: $darker;
+      }
+    }
+
+    .active {
+      span {
+        color: $blue;
+      }
+    }
+  }
+
+  .subreddits {
+    .title {
+      display: inline-block;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: lighten($dark, 40%);
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      padding: 0 3rem;
+    }
+    ul {
+      padding: 0;
+      a {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 3rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+
+        img {
+          width: 2rem;
+          border-radius: 100%;
+        }
+        span {
+          margin-left: 0.5rem;
+        }
+
+        &:hover {
+          span {
+            color: $blue;
+          }
+          background-color: $darker;
+        }
+      }
+    }
+  }
+}

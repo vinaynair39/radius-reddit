@@ -1,0 +1,39 @@
+@import "../../styles/style";
+
+.searchbar {
+  position: relative;
+  & input {
+    width: 80%;
+    padding: 0.6rem 1rem 0.6rem 3rem;
+    transition: all 0.2s ease-out;
+    border-radius: 16px;
+    background-color: $dark;
+    border: none;
+    color: white;
+    &:focus {
+      outline: none;
+      width: 100%;
+    }
+    &::placeholder {
+      color: lighten($dark, 40%);
+    }
+    &:focus {
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+
+  .icon {
+    position: relative;
+    & svg {
+      position: absolute;
+      top: 8px;
+      left: 1rem;
+      width: 1rem;
+      path {
+        fill: lighten($dark, 40%);
+      }
+    }
+  }
+}
