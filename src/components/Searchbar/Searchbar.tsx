@@ -33,7 +33,6 @@ const Searchbar: React.FC<Props> = () => {
     );
    dispatch(setPosts(data.data.children))
    dispatch(setLoading(false))
-   if(pathname !== '/') history.push("/")
   };
 
   return (
