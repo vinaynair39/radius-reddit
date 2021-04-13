@@ -7,14 +7,14 @@
 
 ## Installation
 
+create a .env file in root directory and add the following inside of it
+```bash
+REACT_APP_API=https://www.reddit.com
+```
 
 ```bash
 yarn
 yarn start
-```
-create a .env file in root directory and add the following inside of it
-```bash
-REACT_APP_API=https://www.reddit.com
 ```
 
 
